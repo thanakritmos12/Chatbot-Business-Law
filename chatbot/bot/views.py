@@ -9,7 +9,7 @@ from django.utils.decorators import method_decorator
 from .logic import LOGIC_RESPONSES
 
 
-VERIFY_TOKEN = "" # generated above
+VERIFY_TOKEN = "c735ab9888f151a3721996bef579848694c922b44628dfe489" # generated above
 FB_ENDPOINT = 'https://graph.facebook.com/v12.0/'
 PAGE_ACCESS_TOKEN = ""  
 
