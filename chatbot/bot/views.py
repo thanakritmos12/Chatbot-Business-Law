@@ -11,7 +11,7 @@ from .logic import LOGIC_RESPONSES
 
 VERIFY_TOKEN = "c735ab9888f151a3721996bef579848694c922b44628dfe489" # generated above
 FB_ENDPOINT = 'https://graph.facebook.com/v12.0/'
-PAGE_ACCESS_TOKEN = ""  
+PAGE_ACCESS_TOKEN = "EAAE3KGhIo6EBAKok7UJZAAA45D0aqgRxrCvZBeZBQZBnhHrOSy9MqrlW317cPYTJSJzGtkhGfTDvEJX4hrrgS32xSbvhznEV3Irez1xBpwYvdtZBjvkZBaho1Je63NGtCg23fGQwE7Uy2x9wAMZBqzLlVo1xIAqzMMJ9GOQJ5ZCEUkI6XZC0s4gPX"  
 
 def parse_and_send_fb_message(fbid, recevied_message):
     tokens = recevied_message.lower().split()
