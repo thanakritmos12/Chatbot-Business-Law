@@ -1,10 +1,14 @@
 import nltk
 import pprint
-import word_utils
 import pickle
 import pandas
 
 import pathlib
+import sys
+
+sys.path.append('.')
+
+from chatbot.bot import word_utils
 
 def train(input, output):
     path = pathlib.Path(__file__).parent.parent
@@ -14,7 +18,8 @@ def train(input, output):
 
     questions = []
     for df in dfs.to_dict("records"):
-        questions.append((df["question"], df["tag"]))
+        if type(df['question']) == type(df['tag']) == str:
+            questions.append((df["question"], df["tag"]))
 
     print(questions)
 
@@ -36,4 +41,4 @@ def train(input, output):
     f.close()
 
 if __name__ == '__main__':
-    train('data/train1.xlsx', 'data/my_classifier.pickle')
+    train('data/train.xlsx', 'data/my_classifier.pickle')
