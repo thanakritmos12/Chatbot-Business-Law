@@ -18,25 +18,9 @@ from django.conf import settings
 VERIFY_TOKEN = "c735ab9888f151a3721996bef579848694c922b44628dfe489" # generated above
 FB_ENDPOINT = 'https://graph.facebook.com/v12.0/'
 PAGE_ACCESS_TOKEN = "EAAE3KGhIo6EBAKok7UJZAAA45D0aqgRxrCvZBeZBQZBnhHrOSy9MqrlW317cPYTJSJzGtkhGfTDvEJX4hrrgS32xSbvhznEV3Irez1xBpwYvdtZBjvkZBaho1Je63NGtCg23fGQwE7Uy2x9wAMZBqzLlVo1xIAqzMMJ9GOQJ5ZCEUkI6XZC0s4gPX"  
-
+from . import word_utils
 import pythainlp
 
-def clean_words(words):
-    # stopwords = pythainlp.corpus.common.thai_stopwords()
-    # stopwords = ['', ' ', ',', '.', 'หรือไม่', 'มั้ย', 'ไหม', 'ยังไง', 'ยัง', 'ไง', 'ใหม', 'มัํย', 'มั่ย', 'บ้าง', 'นะ', 'หนา', 'บ้างไม', 'ไม']
-    data = []
-    for word in words:
-        data = word.strip()
-    return data
-
-
-def get_features(data):
-    # words = pythainlp.word_tokenize(data, engine='multi_cut')
-    words = pythainlp.word_tokenize(data, engine='deepcut')
-    # words = pythainlp.syllable_tokenize(data)
-    words = clean_words(words)
-    data = {"words": " ".join(words), "count": len(words)}
-    return data
 
 
 def parse_and_send_fb_message(fbid, recevied_message):
@@ -47,7 +31,7 @@ def parse_and_send_fb_message(fbid, recevied_message):
     responses = apps.get_app_config('bot').responses
     
     message_fb = recevied_message
-    feature = get_features(message_fb)
+    feature = word_utils.get_features(message_fb)
     result = classifier.prob_classify(feature)
     if result.prob(result.max()) < 0.4:
 
