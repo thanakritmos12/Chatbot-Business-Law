@@ -42,7 +42,7 @@ def parse_and_send_fb_message(fbid, recevied_message):
     # Remove all punctuations, lower case the text and split it based on space
     # tokens = re.sub(r"[^a-zA-Z0-9\s]",' ',recevied_message).lower().split()
 
-    dfs = pandas.read_excel(r'C:\Users\user\Projects\baisd\chat_bot_team\chatbot\bot\response.xlsx')
+    dfs = pandas.read_excel('response.xlsx')
 
     responses = {}
     for df in dfs.to_dict("records"):
@@ -50,7 +50,7 @@ def parse_and_send_fb_message(fbid, recevied_message):
             responses[df["tag"]] = []
         responses[df["tag"]].append(df["response"])
 
-    f = open(r"C:\Users\user\Projects\baisd\chat_bot_team\chatbot\bot\my_classifier.pickle", "rb")
+    f = open("my_classifier.pickle", "rb")
     classifier = pickle.load(f)
     f.close()
 
