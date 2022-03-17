@@ -1,6 +1,12 @@
 # Create your views here.
 import json
 import requests, random, re
+import pprint
+import random
+import pandas
+import word_utils
+import pickle
+
 from django.http import HttpResponse, JsonResponse
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
@@ -14,12 +20,23 @@ FB_ENDPOINT = 'https://graph.facebook.com/v12.0/'
 PAGE_ACCESS_TOKEN = "EAAE3KGhIo6EBAKok7UJZAAA45D0aqgRxrCvZBeZBQZBnhHrOSy9MqrlW317cPYTJSJzGtkhGfTDvEJX4hrrgS32xSbvhznEV3Irez1xBpwYvdtZBjvkZBaho1Je63NGtCg23fGQwE7Uy2x9wAMZBqzLlVo1xIAqzMMJ9GOQJ5ZCEUkI6XZC0s4gPX"  
 
 def parse_and_send_fb_message(fbid, recevied_message):
-    tokens = recevied_message.lower().split()
-    msg = None
-    for token in tokens:
-        if token in LOGIC_RESPONSES:
-            msg = random.choice(LOGIC_RESPONSES[token])
-            break
+    dfs = pandas.read_excel("response.xlsx")
+
+    responses = {}
+    for df in dfs.to_dict("records"):
+        if df["tag"] not in responses:
+            responses[df["tag"]] = []
+        responses[df["tag"]].append(df["response"])
+
+    f = open("my_classifier.pickle", "rb")
+    classifier = pickle.load(f)
+    f.close()
+
+    message_fb = recevied_message.lower().split()
+    feature = word_utils.get_features(message_fb)
+    result = classifier.prob_classify(feature)
+
+    msg = random.choice(responses[result.max()])
         
     if msg is not None:                 
         endpoint = f"{FB_ENDPOINT}/me/messages?access_token={PAGE_ACCESS_TOKEN}"
