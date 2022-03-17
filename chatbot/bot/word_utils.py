@@ -29,6 +29,15 @@ def get_features(data):
     features['ห้าม'] = 'ห้าม' in words
     features['ภาษี'] = 'ภาษี' in words
     features['โทษ'] = 'โทษ' in words or 'คุก' in words or 'หราง' in words
+    features['เริ่ม'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words 
+    features['แชร์'] = 'แชร์รูปภาพ' in words or 'แชร์ภาพ' in words or 'แชร์ข้อความ' in words
+    features['จดทะเบียน'] = 'จดทะเบียน' in words
+    features['ขายตรง'] = 'ขายตรง' in words or 'ตลาดตรง' in words
+    features['รายละเอียด'] = 'รายละเอียด' in words or 'ข้อมูล' in words
+    features['คุ้มครอง'] = 'คุ้มครอง' in words or  'กฎหมายคุ้มครอง' in words or 'ผู้บริโภค' in words
+    features['แสดง'] = 'แสดง' in words or 'โชว์' in words
+    features['ประโยชน์'] = 'ประโยชน์' in words or 'ข้อดี' in words or 'ผลดี' in words
+
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
     return data
