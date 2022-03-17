@@ -4,7 +4,7 @@ import requests, random, re
 import pprint
 import random
 import pandas
-import word_utils
+from chatbot.chatbot import word_utils
 import pickle
 
 from django.http import HttpResponse, JsonResponse
