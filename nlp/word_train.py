@@ -33,8 +33,6 @@ def train(input, output):
     # train
     classifier = nltk.NaiveBayesClassifier.train(train_data)
 
-    # print("Accuracy:", nltk.classify.accuracy(classifier, test_data) * 100)
-
     # To save:
     f = open(path/output, "wb")
     pickle.dump(classifier, f)
