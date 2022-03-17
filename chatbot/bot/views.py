@@ -11,9 +11,9 @@ from django.http import HttpResponse, JsonResponse
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-
-from .logic import LOGIC_RESPONSES
-
+import pathlib
+from django.apps import apps
+from django.conf import settings
 
 VERIFY_TOKEN = "c735ab9888f151a3721996bef579848694c922b44628dfe489" # generated above
 FB_ENDPOINT = 'https://graph.facebook.com/v12.0/'
@@ -38,29 +38,21 @@ def get_features(data):
     data = {"words": " ".join(words), "count": len(words)}
     return data
 
+
 def parse_and_send_fb_message(fbid, recevied_message):
     # Remove all punctuations, lower case the text and split it based on space
     # tokens = re.sub(r"[^a-zA-Z0-9\s]",' ',recevied_message).lower().split()
-
-    dfs = pandas.read_excel('response.xlsx')
-
-    responses = {}
-    for df in dfs.to_dict("records"):
-        if df["tag"] not in responses:
-            responses[df["tag"]] = []
-        responses[df["tag"]].append(df["response"])
-
-    f = open("my_classifier.pickle", "rb")
-    classifier = pickle.load(f)
-    f.close()
-
+    # print(settings.__dict__)
+    classifier = apps.get_app_config('bot').classifier
+    responses = apps.get_app_config('bot').responses
+    
     message_fb = recevied_message
     feature = get_features(message_fb)
     result = classifier.prob_classify(feature)
     if result.prob(result.max()) < 0.4:
 
         msg = """ ไม่เข้าจายย พิมพ์ตามหัวข้อนี้หน่อยน้า
-        1. กฎหมายที่เกี่ยวข้องกับการขายของออนไลน์มีกฎหมายสำคัญๆใดที่เกี่ยวข้องบ้าง
+        1. กฎหมายที่สำคัญ
         2. การแชร์รูปภาพหรือข้อความต่างๆ เกี่ยวกับร้านค้าออนไลน์ของตนในพื้นที่โซเซียลมีดีของผู้อื่นผิดกฎหมายหรือไม่
         3. ขั้นตอนการจดทะเบียนพาณิชย์ในการค้าขายออนไลน์มีอะไรบ้าง
         4. การเปิดร้าน
