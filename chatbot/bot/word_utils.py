@@ -1,6 +1,8 @@
 import pythainlp
 import deepcut
 # from pythainlp.tokenize import sent_tokenize
+
+
 def clean_words(words):
     stopwords = pythainlp.corpus.common.thai_stopwords()
     # stopwords = ['', ' ', ',', '.', 'หรือไม่', 'มั้ย', 'ไหม', 'ยังไง', 'ยัง', 'ไง', 'ใหม', 'มัํย', 'มั่ย', 'บ้าง', 'นะ', 'หนา', 'บ้างไม', 'ไม', 'ๆ', 'ปะ', 'ครับ', 'คับ', 'ค่ะ', 'คะ', 'ค้ะ', 'ค้า', 'ค้าบ']
@@ -29,6 +31,9 @@ def get_features(data):
     features['ห้าม'] = 'ห้าม' in words
     features['ภาษี'] = 'ภาษี' in words
     features['โทษ'] = 'โทษ' in words or 'คุก' in words or 'หราง' in words
+    features['เริ่ม'] = 'เริ่ม' in words or 'ครั้งแรก' in words or 'เตรียม' in words
+    features['รายละเอียด'] = 'รายละเอียด' in words or 'ข้อมูล' in words or 'แสดง' in words
+    features['ขาย'] = 'ขาย' in words or 'ตลาด' in words or 'ขายตรง' in words
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
     return data
