@@ -29,6 +29,7 @@ def get_features(data):
     features['รายละเอียด'] = 'รายละเอียด' in words or 'ข้อมูล' in words or 'แสดง' in words or 'โชว์' in words
     features['คุ้มครอง'] = 'คุ้มครอง' in words or  'กฎหมายคุ้มครอง' in words or 'ผู้บริโภค' in words or 'สคบ.' in words or 'สตบ.' in words
     features['ประโยชน์'] = 'ประโยชน์' in words or 'ข้อดี' in words or 'ผลดี' in words
+    features['แบบไหน'] = 'แบบไหน' in words
 
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
