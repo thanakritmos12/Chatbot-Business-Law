@@ -45,8 +45,8 @@ def get_features(data):
     features['ภาษี'] = 'ภาษี' in words or 'จ่าย' in words or 'โดน' in words
 
     # ข้อ 10
-    features['ขาย'] = 'ขาย' in words or 'ขายตรง' in words or 'ตลาดตรง' in words or 'ตลาด' in words or 'ตรง' in words
-   
+    features['ขาย'] = 'ขาย' in words or 'ขายตรง' in words or 'ตรง' in words
+    features['ตลาด'] = 'ตลาด' in words or 'ตรง' in words or 'ตลาดตรง' in words
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
     return data
