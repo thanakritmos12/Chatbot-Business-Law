@@ -18,7 +18,7 @@ def get_features(data):
     words = clean_words(words)
     features = {}
     # ข้อ 1
-    features['กฎหมาย'] = 'กฎหมาย' in words or 'สำคัญ' in words or 'ต้อง' in words or 'รู้' in words
+    features['กฎหมาย'] = 'กฎหมาย' in words or 'สำคัญ' in words or 'ต้อง' in words or 'รู้' in words or 'กฎ' in words
     features['ร้านค้า'] = 'ร้านค้า' in words or 'ออนไลน์' in words or 'online' in words or 'ร้าน' in words or 'ค้า' in words
 
     # ข้อ 2
