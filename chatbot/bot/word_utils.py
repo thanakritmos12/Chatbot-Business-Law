@@ -18,9 +18,9 @@ def get_features(data):
     words = clean_words(words)
     features = {}
     features['กฎหมาย'] = 'กฎหมาย' in words
-    features['ร้านค้า'] = 'ร้านค้า' in words or 'ออนไลน์' in words or 'online' in words
-    features['ห้าม'] = 'ห้าม' in words
-    features['ภาษี'] = 'ภาษี' in words
+    features['ร้านค้า'] = 'ร้านค้า' in words or 'ออนไลน์' in words or 'online' in words or 'ร้าน' in words or 'ค้า' in words
+    features['ห้าม'] = 'ห้าม' in words or 'ผิด' in words
+    features['ภาษี'] = 'ภาษี' in words or 'จ่าย' in words or 'โดน' in words
     features['โทษ'] = 'โทษ' in words or 'คุก' in words or 'หราง' in words
     features['เริ่ม'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words or 'เตรียม' in words
     features['แชร์'] = 'แชร์รูปภาพ' in words or 'แชร์ภาพ' in words or 'แชร์ข้อความ' in words or ['สาธารณะ'] in words or ['ฝากร้าน'] in words or ['โปรโมท'] in words

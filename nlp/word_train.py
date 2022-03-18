@@ -2,7 +2,6 @@ import nltk
 import pprint
 import pickle
 import pandas
-
 import pathlib
 import sys
 
@@ -20,8 +19,6 @@ def train(input, output):
     for df in dfs.to_dict("records"):
         if type(df['question']) == type(df['tag']) == str:
             questions.append((df["question"], df["tag"]))
-
-    print(questions)
 
     train_data = []
     for question, tag in questions:
