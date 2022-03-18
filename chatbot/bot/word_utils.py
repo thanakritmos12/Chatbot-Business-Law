@@ -22,7 +22,7 @@ def get_features(data):
     features['ร้านค้า'] = 'ร้านค้า' in words or 'ออนไลน์' in words or 'online' in words or 'ร้าน' in words or 'ค้า' in words
 
     # ข้อ 2
-    features['แชร์'] = 'แชร์รูปภาพ' in words or 'แชร์ภาพ' in words or 'แชร์ข้อความ' in words or ['สาธารณะ'] in words or ['ฝากร้าน'] in words or ['โปรโมท'] in words
+    features['แชร์'] = 'แชร์รูปภาพ' in words or 'แชร์ภาพ' in words or 'แชร์ข้อความ' in words or 'สาธารณะ' in words or 'ฝากร้าน' in words or 'โปรโมท' in words
 
     # ข้อ 3
     features['พานิชย์'] = 'พานิชย์' in words or 'จดทะเบียนพานิชย์' in words or 'ทะเบียนพานิชย์' in words or 'ทะเบียนการค้า' in words or 'ทะเบียนค้าขาย' in words or 'ทะเบียนซื้อขาย' in words 
@@ -31,7 +31,7 @@ def get_features(data):
     features['เริ่ม'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words or 'เตรียม' in words
 
     # ข้อ 5
-    features['อิเล็กทรอนิก'] = 'อิเล็กทรอนิก' in words or 'อิเล็กทรอนิกซ์' in words or 'DBD Registered' in words or 'dbd registered' in words
+    features['อิเล็กทรอนิกส์'] = 'อิเล็กทรอนิก' in words or 'อิเล็กทรอนิกซ์' in words or 'DBD Registered' in words or 'dbd registered' in words
 
     # ข้อ 6 
     features['คุ้มครอง'] = 'คุ้มครอง' in words or  'กฎหมายคุ้มครอง' in words or 'ผู้บริโภค' in words or 'สคบ.' in words or 'สตบ.' in words
