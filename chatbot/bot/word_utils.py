@@ -49,8 +49,8 @@ def get_features(data):
     features['ข้อสิบ'] = 'ขาย' in words or 'ขายตรง' in words or 'ตรง' in words or 'ตลาด' in words or 'ตลาดตรง' in words
 
     # ทักทาย
-    features['Hi'] = 'Hi' in words or 'Hello' in words or 'Yea' in words or 'Sup' in words or 'Yo' in words or 'Hey' in words or 'up' in words
-    features['ดี'] = 'ดี' in words or 'สวัสดี' in words or 'หวัดดี' in words or 'ดีจ้า' in words or 'ค้า' in words or 'ฮัลโหล' in words or 'โหล' in words or 'โย่' in words or 'ไง' in words or 'โหล' in words
+    features['greet'] = 'Hi' in words or 'Hello' in words or 'Yeah' in words or 'Sup' in words or 'Yo' in words or 'Hey' in words or 'up' in words or 'Yea' in words or 'Yess' in words or 'Yes' in words or 'Yep' in words or 'What' in words
+    features['ทักทาย'] = 'ดี' in words or 'สวัสดี' in words or 'หวัดดี' in words or 'ดีจ้า' in words or 'ค้า' in words or 'ฮัลโหล' in words or 'โหล' in words or 'โย่' in words or 'ไง' in words or 'โหล' in words
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
     return data
