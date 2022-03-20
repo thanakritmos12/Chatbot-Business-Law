@@ -6,7 +6,7 @@ import deepcut
 def clean_words(words):
     # stopwords = pythainlp.corpus.common.thai_stopwords()
     stopwords = ['อะไร', 'บ้าง', 'อะไรบ้าง', 'ไหม', 'มั้ย', 'ไม', 'ไร', 'ร้านค้า', 'ร้าน',
-     'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง']
+     'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง','ออนไลน์','online','ขาย']
     data = []
     for word in words:
         word = word.strip()
