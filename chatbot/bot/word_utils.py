@@ -23,7 +23,7 @@ def get_features(data):
     # features['ข้อหนึ่ง'] = 'สำคัญ' in words or 'สำคัญๆ' in words or 'ควรรู้' in words or 'รู้' in words or 'ต้องรู้' in words or 'ต้อง' in words or 'ทราบ' in words or 'ควรทราบ' in words or 'เกี่ยวข้อง' in words or 'ออนไลน์' in words or 'online' in words or 'กำหนด' in words 
 
     # # # ข้อ 2
-    features['ข้อสอง'] = 'แชร์รูปภาพ' in words or 'แชร์ภาพ' in words or 'ข้อความ' in words or 'สาธารณะ' in words or 'ฝากร้าน' in words or 'โปรโมท' in words or 'โพส' in words or 'แชร์' in words or 'แชร์โพสต์' in words or 'แชร์โพส' in words or 'แช' in words or 'share' in words or 'post' in words or 'link' in words or 'ภาพ' in words or 'กลุ่ม' in words or 'แนะนำ' in words or 'ฝาก' in words or 'แชร์ร้าน' in words or 'แชร้าน' in words
+    # features['ข้อสอง'] = 'แชร์รูปภาพ' in words or 'แชร์ภาพ' in words or 'ข้อความ' in words or 'สาธารณะ' in words or 'ฝากร้าน' in words or 'โปรโมท' in words or 'โพส' in words or 'แชร์' in words or 'แชร์โพสต์' in words or 'แชร์โพส' in words or 'แช' in words or 'share' in words or 'post' in words or 'link' in words or 'ภาพ' in words or 'กลุ่ม' in words or 'แนะนำ' in words or 'ฝาก' in words or 'แชร์ร้าน' in words or 'แชร้าน' in words
 
     # # # ข้อ 3
     # features['ข้อสาม'] = 'พานิชย์' in words or 'จดทะเบียนพานิชย์' in words or 'ทะเบียนพานิชย์' in words or 'ทะเบียนการค้า' in words or 'ทะเบียนค้าขาย' in words or 'ทะเบียนซื้อขาย' in words or 'ขั้นตอน' in words or 'จด' in words or 'ทะเบียน' in words or 'พาณิชย์' in words or 'พาณิช' in words
@@ -46,7 +46,7 @@ def get_features(data):
     # features['ข้อเก้า'] = 'ภาษี' in words or 'จ่าย' in words or 'โดน' in words
 
     # # # ข้อ 10
-    # features['ข้อสิบ'] = 'ขาย' in words or 'ขายตรง' in words or 'ตรง' in words or 'ตลาด' in words or 'ตลาดตรง' in words
+    features['ข้อสิบ'] = 'ขาย' in words or 'ขายตรง' in words or 'ตรง' in words or 'ตลาด' in words or 'ตลาดตรง' in words
 
     # # ทักทาย
     # features['greet'] = 'Hi' in words or 'Hello' in words or 'Yeah' in words or 'Sup' in words or 'Yo' in words or 'Hey' in words or 'up' in words or 'Yea' in words or 'Yess' in words or 'Yes' in words or 'Yep' in words or 'What' in words
