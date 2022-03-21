@@ -53,10 +53,19 @@ def get_features(data):
     features['ทักทาย'] = 'ดี' in words or 'สวัสดี' in words or 'หวัดดี' in words or 'ดีจ้า' in words or 'ค้า' in words or 'ฮัลโหล' in words or 'โหล' in words or 'โย่' in words or 'ไง' in words or 'โหล' in words or 'ดี' in words or 'Hi' in words or 'Hello' in words or 'Yeah' in words or 'Sup' in words or 'Yo' in words or 'Hey' in words or 'up' in words or 'Yea' in words or 'Yess' in words or 'Yes' in words or 'Yep' in words or 'What' in words
 
     # สบายดี
-    features['สบายดี'] = 'สบาย' in words or 'บาย' in words or 'บัย' in words 
+    features['สบายดี'] = 'สบาย' in words or 'บาย' in words or 'บัย' in words or 'สบายดี' in words
 
     # บอทโง่
-    features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบไม่ตรง' in words or 'งง' in words 
+    features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบ' in words or 'งง' in words or 'ตรง' in words
+
+    # ชมบอท
+    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words
+
+    # ชมบอท
+    features['ทำอะไร'] = 'ทำอะไร' in words or 'ทำ' in words or 'ตอบ' in words or 'งง' in words or 'ตรง' in words
+
+    # ชมบอท
+    features['ชื่ออะไร'] = 'ชื่อ' in words or 'ชื่ออะไร' in words
 
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
