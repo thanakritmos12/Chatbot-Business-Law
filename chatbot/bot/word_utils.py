@@ -55,6 +55,9 @@ def get_features(data):
     # สบายดี
     features['สบายดี'] = 'สบาย' in words or 'บาย' in words or 'บัย' in words 
 
+    # บอทโง่
+    features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบไม่ตรง' in words or 'งง' in words 
+
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
     return data
