@@ -32,7 +32,7 @@ def get_features(data):
     features['ข้อสี่'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words or 'เตรียม' in words or 'สร้าง' in words or 'เริ่มต้น' in words or 'ก่อน' in words or 'เปิด' in words or 'เริ่ม' in words or 'สร้าง' in words or 'แรก' in words or 'อยาก' in words
 
     # ข้อ 5
-    features['ข้อห้า'] = 'อิเล็กทรอนิกซ์' in words or 'อิเล็กทรอนิก' in words or 'อิเล็กทรอนิกส์' in words or 'DBD' in words or 'dbd ' in words or 'registered' in words or 'Registered' in words or 'แบบ' in words or 'ลักษณะ' in words or 'ประ' in words or 'เภท' in words or 'ประเภท' in words or 'shopee' in words or 'lazada' in words
+    features['ข้อห้า'] = 'อิเล็กทรอนิกซ์' in words or 'อิเล็กทรอนิก' in words or 'อิเล็กทรอนิกส์' in words or 'DBD' in words or 'dbd ' in words or 'registered' in words or 'Registered' in words or 'แบบ' in words or 'ลักษณะ' in words or 'ประ' in words or 'เภท' in words or 'ประเภท' in words or 'shopee' in words or 'lazada' in words or 'electronic' in words or 'electronics' in words or 'Electronic' in words or 'Electronics' in words
 
     # ข้อ 6 
     features['ข้อหก'] = 'คุ้มครอง' in words or  'กฎหมายคุ้มครอง' in words or 'ผู้บริโภค' in words or 'สคบ.' in words or 'สตบ.' in words or 'บริโภค' in words or 'ลูกค้า' in words or 'ลูก' in words or 'ค้า' in words or 'สคบ' in words or 'สตบ' in words
@@ -41,7 +41,7 @@ def get_features(data):
     features['ข้อเจ็ด'] = 'ห้าม' in words or 'ผิด' in words or 'ลักลอบ' in words or 'อันตราย' in words or 'ต้องห้าม' in words or 'ไม่' in words or 'คุก' in words or 'ระวัง' in words 
  
     # ข้อ 8
-    features['ข้อแปด'] = 'รายละเอียด' in words or 'ข้อมูล' in words or 'แสดง' in words or 'โชว์' in words or 'ประวัติ' in words or 'รายละเอียดร้าน' in words
+    features['ข้อแปด'] = 'รายละเอียด' in words or 'ข้อมูล' in words or 'แสดง' in words or 'โชว์' in words or 'ประวัติ' in words or 'รายละเอียดร้าน' in words or 'ราคา' in words
 
     # ข้อ 9
     features['ข้อเก้า'] = 'ภาษี' in words or 'จ่าย' in words or 'โดน' in words
