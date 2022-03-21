@@ -32,7 +32,7 @@ def get_features(data):
     features['ข้อสี่'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words or 'เตรียม' in words or 'สร้าง' in words or 'เริ่มต้น' in words or 'ก่อน' in words or 'เปิด' in words or 'เริ่ม' in words or 'สร้าง' in words or 'แรก' in words
 
     # ข้อ 5
-    features['ข้อห้า'] = 'อิเล็กทรอนิกซ์' in words or 'อิเล็กทรอนิก' in words or 'อิเล็กทรอนิกส์' in words or 'DBD' in words or 'dbd ' in words or 'registered' in words or 'Registered' in words 
+    features['ข้อห้า'] = 'อิเล็กทรอนิกซ์' in words or 'อิเล็กทรอนิก' in words or 'อิเล็กทรอนิกส์' in words or 'DBD' in words or 'dbd ' in words or 'registered' in words or 'Registered' in words or 'แบบ' in words or 'ลักษณะ' in words or 'ประ' in words or 'เภท' in words or 'ประเภท' in words or 'shopee' in words or 'lazada' in words
 
     # ข้อ 6 
     features['ข้อหก'] = 'คุ้มครอง' in words or  'กฎหมายคุ้มครอง' in words or 'ผู้บริโภค' in words or 'สคบ.' in words or 'สตบ.' in words or 'บริโภค' in words
