@@ -6,7 +6,7 @@ import deepcut
 def clean_words(words):
     # stopwords = pythainlp.corpus.common.thai_stopwords()
     stopwords = ['กฎหมาย','กฏหมาย','อะไร', 'บ้าง', 'อะไรบ้าง', 'ไหม', 'มั้ย', 'ไม', 'ไร', 'ร้านค้า', 'ร้าน',
-     'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง','ออนไลน์','online','ขาย','ต้อง','จด','ทะเบียน']
+     'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง','ออนไลน์','online','ขาย' ,'ไง', 'อะ', 'อ้ะ', 'หรอ', 'ต้อง']
     data = []
     for word in words:
         word = word.strip()
@@ -26,7 +26,8 @@ def get_features(data):
     features['ข้อสอง'] = 'แชร์รูปภาพ' in words or 'แชร์ภาพ' in words or 'ข้อความ' in words or 'สาธารณะ' in words or 'ฝากร้าน' in words or 'โปรโมท' in words or 'โพส' in words or 'แชร์' in words or 'แชร์โพสต์' in words or 'แชร์โพส' in words or 'แช' in words or 'share' in words or 'post' in words or 'link' in words or 'ภาพ' in words or 'กลุ่ม' in words or 'แนะนำ' in words or 'ฝาก' in words or 'แชร์ร้าน' in words or 'แชร้าน' in words
 
     # ข้อ 3
-    features['ข้อสาม'] = 'พานิชย์' in words or 'จดทะเบียนพานิชย์' in words or 'ทะเบียนพานิชย์' in words or 'ทะเบียนการค้า' in words or 'ทะเบียนค้าขาย' in words or 'ทะเบียนซื้อขาย' in words or 'ขั้นตอน' in words or 'จด' in words or 'ทะเบียน' in words or 'พาณิชย์' in words or 'พาณิช' in words
+    features['ข้อสาม'] = 'พานิชย์' in words or 'จดทะเบียนพานิชย์' in words or 'ทะเบียนพานิชย์' in words or 'ทะเบียนการค้า' in words or 'ทะเบียนค้าขาย' in words or 'ทะเบียนซื้อขาย' in words or 'ขั้นตอน' in words or 'จด' in words or 'ทะเบียน' in words or 'พาณิชย์' in words or 'พาณิช' in words or 'เบียน' in words or 'จดทะเบียน' in words
+
     # ข้อ 4
     features['ข้อสี่'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words or 'เตรียม' in words or 'สร้าง' in words or 'เริ่มต้น' in words or 'ก่อน' in words or 'เปิด' in words or 'เริ่ม' in words or 'สร้าง' in words or 'แรก' in words
 
