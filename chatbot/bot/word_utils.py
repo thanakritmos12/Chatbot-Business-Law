@@ -20,7 +20,7 @@ def get_features(data):
     words = clean_words(words)
     features = {}
     #  1
-    features['ข้อหนึ่ง'] = 'สำคัญ' in words or 'สำคัญๆ' in words or 'ควรรู้' in words or 'รู้' in words or 'ต้องรู้' in words or 'ต้อง' in words or 'ทราบ' in words or 'ควรทราบ' in words or 'เกี่ยวข้อง' in words or 'ออนไลน์' in words or 'online' in words or 'กำหนด' in words 
+    features['ข้อหนึ่ง'] = 'สำคัญ' in words or 'สำคัญๆ' in words or 'ควรรู้' in words or 'รู้' in words or 'ต้องรู้' in words or 'ต้อง' in words or 'ทราบ' in words or 'ควรทราบ' in words or 'เกี่ยวข้อง' in words or 'ออนไลน์' in words or 'online' in words or 'กำหนด' in words or '1' in words
 
     # ข้อ 2
     features['ข้อสอง'] = 'แชร์รูปภาพ' in words or 'แชร์ภาพ' in words or 'ข้อความ' in words or 'สาธารณะ' in words or 'ฝากร้าน' in words or 'โปรโมท' in words or 'โพส' in words or 'แชร์' in words or 'แชร์โพสต์' in words or 'แชร์โพส' in words or 'แช' in words or 'share' in words or 'post' in words or 'link' in words or 'ภาพ' in words or 'กลุ่ม' in words or 'แนะนำ' in words or 'ฝาก' in words or 'แชร์ร้าน' in words or 'แชร้าน' in words or 'โฆษณา' in words
