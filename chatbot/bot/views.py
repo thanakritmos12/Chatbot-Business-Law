@@ -41,7 +41,7 @@ def parse_and_send_fb_message(fbid, recevied_message):
 7. สินค้าที่ห้ามขายออนไลน์
 8. รายละเอียดที่ต้องแสดงในการขาย
 9. การเสียภาษี
-10. การขายตรง
+10. การขายตรงได้ไหม
         """
     else :
         msg = random.choice(responses[result.max()])
