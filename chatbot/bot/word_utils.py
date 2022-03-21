@@ -27,14 +27,8 @@ def get_features(data):
 
     # ข้อ 3
     features['ข้อสาม'] = 'พานิชย์' in words or 'จดทะเบียนพานิชย์' in words or 'ทะเบียนพานิชย์' in words or 'ทะเบียนการค้า' in words or 'ทะเบียนค้าขาย' in words or 'ทะเบียนซื้อขาย' in words or 'ขั้นตอน' in words or 'จด' in words or 'ทะเบียน' in words or 'พาณิชย์' in words or 'พาณิช' in words
-<<<<<<< HEAD
-    # # # # ข้อ 4
-    features['ข้อสี่'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words or 'เตรียม' in words or 'สร้าง' in words or 'เริ่มต้น' in words or 'ก่อน' in words or 'เปิด' in words or 'เริ่ม' in words or 'สร้าง' in words or 'แรก' in words
-=======
-    
     # ข้อ 4
-    features['ข้อสี่'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words or 'เตรียม' in words or 'สร้าง' in words or 'เริ่มต้น' in words or 'ก่อน' in words or 'เปิด' in words or 'เริ่ม' in words or 'สร้าง' in words
->>>>>>> a235f686081403fbd53968dfd70513f37905497b
+    features['ข้อสี่'] = 'เริ่ม' in words or 'ขั้นแรก' in words or 'ก่อนขาย' in words or 'เตรียม' in words or 'สร้าง' in words or 'เริ่มต้น' in words or 'ก่อน' in words or 'เปิด' in words or 'เริ่ม' in words or 'สร้าง' in words or 'แรก' in words
 
     # ข้อ 5
     features['ข้อห้า'] = 'อิเล็กทรอนิกซ์' in words or 'อิเล็กทรอนิก' in words or 'อิเล็กทรอนิกส์' in words or 'DBD' in words or 'dbd ' in words or 'registered' in words or 'Registered' in words 
