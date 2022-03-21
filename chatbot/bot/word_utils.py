@@ -41,7 +41,7 @@ def get_features(data):
     features['ข้อเจ็ด'] = 'ห้าม' in words or 'ผิด' in words or 'ลักลอบ' in words or 'อันตราย' in words or 'ต้องห้าม' in words or 'ไม่' in words or 'คุก' in words or 'ระวัง' in words 
  
     # ข้อ 8
-    features['ข้อแปด'] = 'รายละเอียด' in words or 'ข้อมูล' in words or 'แสดง' in words or 'โชว์' in words or 'ประวัติ' in words or 'รายละเอียดร้าน' in words
+    features['ข้อแปด'] = 'รายละเอียด' in words or 'ข้อมูล' in words or 'แสดง' in words or 'โชว์' in words or 'ประวัติ' in words or 'รายละเอียดร้าน' in words or 'ราคา' in words
 
     # ข้อ 9
     features['ข้อเก้า'] = 'ภาษี' in words or 'จ่าย' in words or 'โดน' in words
