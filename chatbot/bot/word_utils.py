@@ -61,11 +61,13 @@ def get_features(data):
     # ชมบอท
     features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words
 
-    # ชมบอท
+    # ทำอะไร
     features['ทำอะไร'] = 'ทำอะไร' in words or 'ทำ' in words or 'ตอบ' in words or 'งง' in words or 'ตรง' in words
 
-    # ชมบอท
+    # ชื่ออะไร
     features['ชื่ออะไร'] = 'ชื่อ' in words or 'ชื่ออะไร' in words
+
+
 
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
