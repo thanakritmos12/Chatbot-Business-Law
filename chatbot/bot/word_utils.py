@@ -35,7 +35,7 @@ def get_features(data):
     features['ข้อห้า'] = 'อิเล็กทรอนิกซ์' in words or 'อิเล็กทรอนิก' in words or 'อิเล็กทรอนิกส์' in words or 'DBD' in words or 'dbd ' in words or 'registered' in words or 'Registered' in words or 'แบบ' in words or 'ลักษณะ' in words or 'ประ' in words or 'เภท' in words or 'ประเภท' in words or 'shopee' in words or 'lazada' in words
 
     # ข้อ 6 
-    features['ข้อหก'] = 'คุ้มครอง' in words or  'กฎหมายคุ้มครอง' in words or 'ผู้บริโภค' in words or 'สคบ.' in words or 'สตบ.' in words or 'บริโภค' in words
+    features['ข้อหก'] = 'คุ้มครอง' in words or  'กฎหมายคุ้มครอง' in words or 'ผู้บริโภค' in words or 'สคบ.' in words or 'สตบ.' in words or 'บริโภค' in words or 'ลูกค้า' in words or 'ลูก' in words or 'ค้า' in words or 'สคบ' in words or 'สตบ' in words
 
     # ข้อ 7
     features['ข้อเจ็ด'] = 'ห้าม' in words or 'ผิด' in words or 'ลักลอบ' in words or 'อันตราย' in words or 'ต้องห้าม' in words or 'ไม่' in words
