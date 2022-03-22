@@ -7,7 +7,7 @@ def clean_words(words):
     # stopwords = pythainlp.corpus.common.thai_stopwords()
     stopwords = ['กฎหมาย','กฏหมาย','บ้าง', 'ไหม', 'มั้ย', 'ไม', 'ร้านค้า', 'ร้าน',
      'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง','ออนไลน์','online','ขาย' ,
-     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยู่', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา']
+     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยู่', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา', 'เลย']
     data = []
     for word in words:
         word = word.strip()
@@ -51,7 +51,7 @@ def get_features(data):
     features['ข้อสิบ'] = 'ขาย' in words or 'ขายตรง' in words or 'ตรง' in words or 'ตลาด' in words or 'ตลาดตรง' in words or '10' in words
 
     # ทักทาย
-    features['ทักทาย'] = 'ดี' in words or 'สวัสดี' in words or 'หวัดดี' in words or 'ดีจ้า' in words or 'ค้า' in words or 'ฮัลโหล' in words or 'โหล' in words or 'โย่' in words or 'ไง' in words or 'โหลๆ' in words or 'ดี' in words or 'Hi' in words or 'Hello' in words or 'Yeah' in words or 'Sup' in words or 'Yo' in words or 'Hey' in words or 'up' in words or 'Yea' in words or 'Yess' in words or 'Yes' in words or 'Yep' in words or 'What' in words or 'bot' in words or 'ดีบอท' in words or 'บอท' in words or 'สวัสดีบอท' in words or 'หวัดดีบอท' in words or 'ไงบอท' in words
+    features['ทักทาย'] = 'สวัสดี' in words or 'หวัดดี' in words or 'ดีจ้า' in words or 'ค้า' in words or 'ฮัลโหล' in words or 'โหล' in words or 'โย่' in words or 'ไง' in words or 'โหลๆ' in words or 'Hi' in words or 'Hello' in words or 'Yeah' in words or 'Sup' in words or 'Yo' in words or 'Hey' in words or 'up' in words or 'Yea' in words or 'Yess' in words or 'Yes' in words or 'Yep' in words or 'What' in words or 'bot' in words or 'ดีบอท' in words or 'บอท' in words or 'สวัสดีบอท' in words or 'หวัดดีบอท' in words or 'ไงบอท' in words
 
     # สบายดี
     features['สบายดี'] = 'สบาย' in words or 'บาย' in words or 'บัย' in words or 'สบายดี' in words
@@ -60,7 +60,7 @@ def get_features(data):
     features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบ' in words or 'งง' in words
 
     # ชมบอท
-    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words or 'ดีมาก' in words
+    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words or 'ดีมาก' in words or 'ดี' in words or 'มาก' in words
 
     # ทำอะไร
     features['ทำอะไร'] = 'ทำอะไร' in words or 'ทำ' in words or 'ทำไร' in words
