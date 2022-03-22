@@ -7,7 +7,7 @@ def clean_words(words):
     # stopwords = pythainlp.corpus.common.thai_stopwords()
     stopwords = ['กฎหมาย','กฏหมาย','บ้าง', 'ไหม', 'มั้ย', 'ไม', 'ร้านค้า', 'ร้าน',
      'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง','ออนไลน์','online','ขาย' ,
-     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยู่', 'อยาก', 'ทราบ', 'ของ']
+     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยู่', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา']
     data = []
     for word in words:
         word = word.strip()
@@ -60,7 +60,7 @@ def get_features(data):
     features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบ' in words or 'งง' in words
 
     # ชมบอท
-    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words
+    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words or 'ดีมาก' in words
 
     # ทำอะไร
     features['ทำอะไร'] = 'ทำอะไร' in words or 'ทำ' in words or 'ทำไร' in words
@@ -70,6 +70,12 @@ def get_features(data):
 
     # หัวข้อ
     features['หัวข้อ'] = 'หัวข้อ' in words
+
+    # ยินดี
+    features['ยินดี'] = 'ขอบคุณ' in words or 'ขอบคุณบอท' in words or 'ขอบใจ' in words or 'ขอบใจบอท' in words or 'ขอบคุน' in words
+
+    # คำถาม
+    features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words
 
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
