@@ -77,6 +77,9 @@ def get_features(data):
     # คำถาม
     features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words or 'สงสัย' in words
 
+    # easter egg 1
+    features['เบื่อ'] = 'เบื่อ' in words or 'เบื่อจัง' in words or 'เหงา' in words or 'เบื่อๆ' in words or 'เหงาๆ' in words or 'เหงาจัง' in words
+
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
     return data 
