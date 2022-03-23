@@ -75,7 +75,7 @@ def get_features(data):
     features['ยินดี'] = 'ขอบคุณ' in words or 'ขอบคุณบอท' in words or 'ขอบใจ' in words or 'ขอบใจบอท' in words or 'ขอบคุน' in words
 
     # คำถาม
-    features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words
+    features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words or 'สงสัย' in words
 
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
