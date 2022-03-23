@@ -60,7 +60,7 @@ def get_features(data):
     features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบ' in words or 'งง' in words or 'มั่ว' in words or 'เพ้อ' in words
 
     # ชมบอท
-    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words or 'ดีมาก' in words or 'ดี' in words or 'มาก' in words
+    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words or 'ดีมาก' in words or 'ดี' in words or 'มาก' in words or 'เยี่ยม' in words 
 
     # ทำอะไร
     features['ทำอะไร'] = 'ทำอะไร' in words or 'ทำ' in words or 'ทำไร' in words
