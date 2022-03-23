@@ -72,7 +72,7 @@ def get_features(data):
     features['หัวข้อ'] = 'หัวข้อ' in words
 
     # ยินดี
-    features['ยินดี'] = 'ขอบคุณ' in words or 'ขอบคุณบอท' in words or 'ขอบใจ' in words or 'ขอบใจบอท' in words or 'ขอบคุน' in words
+    features['ยินดี'] = 'ขอบคุณ' in words or 'ขอบคุณบอท' in words or 'ขอบใจ' in words or 'ขอบใจบอท' in words or 'ขอบคุน' in words or 'แต้ง' in words
 
     # คำถาม
     features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words or 'สงสัย' in words
