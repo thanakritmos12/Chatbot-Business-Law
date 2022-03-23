@@ -57,7 +57,7 @@ def get_features(data):
     features['สบายดี'] = 'สบาย' in words or 'บาย' in words or 'บัย' in words or 'สบายดี' in words
 
     # บอทโง่
-    features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบ' in words or 'งง' in words or 'มั่ว' in words
+    features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบ' in words or 'งง' in words or 'มั่ว' in words or 'เพ้อ' in words
 
     # ชมบอท
     features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words or 'ดีมาก' in words or 'ดี' in words or 'มาก' in words
