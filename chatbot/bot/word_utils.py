@@ -80,8 +80,8 @@ def get_features(data):
     # easter egg 1
     features['เบื่อ'] = 'เบื่อ' in words or 'เบื่อจัง' in words or 'เหงา' in words or 'เบื่อๆ' in words or 'เหงาๆ' in words or 'เหงาจัง' in words
     features['ตกลง'] = 'โอเค'in words or 'เคร' in words or 'เค' in words or 'เคร' in words or 'โอเช' in words or 'เช' in words or 'ตกลง' in words or 'ได้' in words or 'เอา' in words or 'โอเคร' in words or 'ok' in words or 'k' in words or 'okay' in words
-    features['หนึ่งถูก'] = 'ไทย' in words and 'ตรัง' in words and 'เพราะ' in words or 'ประเทศ' in words
-    features['สองถูก'] = 'ฉัน' in words and 'เพล' in words
+    features['หนึ่งถูก'] = 'ไทย' in words or 'ตรัง' in words or 'เพราะ' in words or 'ประเทศ' in words
+    features['สองถูก'] = 'ฉัน' in words or 'เพล' in words
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
     return data 
