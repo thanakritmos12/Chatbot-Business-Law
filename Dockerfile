@@ -9,6 +9,6 @@ COPY . /app
 WORKDIR /app
 
 RUN pip install -r requirements.txt
-RUN cd chatbot/ 
+# RUN cd chatbot/ 
 EXPOSE 8000
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python3", "chatbot/manage.py", "runserver", "0.0.0.0:8000"]
