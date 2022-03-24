@@ -68,6 +68,9 @@ def get_features(data):
     # ชื่ออะไร
     features['ชื่ออะไร'] = 'ชื่อ' in words or 'ชื่ออะไร' in words
 
+    # บอกลา
+    features['บอกลา'] = 'บาย' in words or 'บ้ายบาย' in words  or 'ลาก่อน' in words  or 'บ้ายบ่าย' in words  or 'บรัย' in words  
+
     # หัวข้อ
     features['หัวข้อ'] = 'หัวข้อ' in words
 
