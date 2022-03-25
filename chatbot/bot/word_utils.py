@@ -7,7 +7,7 @@ def clean_words(words):
     # stopwords = pythainlp.corpus.common.thai_stopwords()
     stopwords = ['กฎหมาย','กฏหมาย','บ้าง', 'ไหม', 'มั้ย', 'ไม', 'ร้านค้า', 'ร้าน',
      'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง','ออนไลน์','online','ขาย' ,
-     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยู่', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา', 'เลย', 'จ้า', 'ครับ', 'ค้าบ', 'ค่ะ', 'คับ','ค่าบ','(',')','ต้อง']
+     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา', 'เลย', 'จ้า', 'ครับ', 'ค้าบ', 'ค่ะ', 'คับ','ค่าบ','(',')','ต้อง']
     data = []
     for word in words:
         word = word.strip()
@@ -79,6 +79,18 @@ def get_features(data):
 
     # คำถาม
     features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words or 'สงสัย' in words
+
+    # กินอะไรยัง
+    features['กิน'] = 'กิน' in words
+
+    # อยู่ที่ไหน
+    features['อยู่ที่ไหน'] = 'อยู่ที่ไหน' in words or 'อยู่' in words or 'ที่ไหน' in words or 'ไหน' in words
+
+    # ใครสร้าง
+    features['ใครสร้าง'] = 'ใคร' in words or 'สร้าง' in words or 'ทำ' in words
+
+    # อยู่ที่ไหน
+    features['อากาศ'] = 'อากาศ' in words
 
     # easter egg 1
     features['เบื่อ'] = 'เบื่อ' in words or 'เบื่อจัง' in words or 'เหงา' in words or 'เบื่อๆ' in words or 'เหงาๆ' in words or 'เหงาจัง' in words
