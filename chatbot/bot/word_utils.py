@@ -92,6 +92,9 @@ def get_features(data):
     # อากาศเป็นไง
     features['อากาศ'] = 'อากาศ' in words
 
+    # อยู่ที่ไหน eng
+    features['where'] = 'where' in words
+
     # easter egg 1
     features['เบื่อ'] = 'เบื่อ' in words or 'เบื่อจัง' in words or 'เหงา' in words or 'เบื่อๆ' in words or 'เหงาๆ' in words or 'เหงาจัง' in words
     features['ตกลง'] = 'โอเค'in words or 'เคร' in words or 'เค' in words or 'เคร้' in words or 'โอเช' in words or 'เช' in words or 'ตกลง' in words or 'ได้' in words or 'เอา' in words or 'โอเคร' in words or 'ok' in words or 'k' in words or 'okay' in words
