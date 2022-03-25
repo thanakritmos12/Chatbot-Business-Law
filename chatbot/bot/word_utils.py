@@ -89,7 +89,7 @@ def get_features(data):
     # ใครสร้าง
     features['ใครสร้าง'] = 'ใคร' in words or 'สร้าง' in words or 'ทำ' in words
 
-    # อยู่ที่ไหน
+    # อากาศเป็นไง
     features['อากาศ'] = 'อากาศ' in words
 
     # easter egg 1
