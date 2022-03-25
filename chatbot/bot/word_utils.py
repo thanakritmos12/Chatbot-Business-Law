@@ -7,7 +7,7 @@ def clean_words(words):
     # stopwords = pythainlp.corpus.common.thai_stopwords()
     stopwords = ['กฎหมาย','กฏหมาย','บ้าง', 'ไหม', 'มั้ย', 'ไม', 'ร้านค้า', 'ร้าน',
      'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง','ออนไลน์','online','ขาย' ,
-     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยู่', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา', 'เลย', 'จ้า', 'ครับ', 'ค้าบ', 'ค่ะ', 'คับ','ค่าบ','(',')','ต้อง']
+     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา', 'เลย', 'จ้า', 'ครับ', 'ค้าบ', 'ค่ะ', 'คับ','ค่าบ','ต้อง', 'ผิด']
     data = []
     for word in words:
         word = word.strip()
@@ -66,7 +66,7 @@ def get_features(data):
     features['ทำอะไร'] = 'ทำอะไร' in words or 'ทำ' in words or 'ทำไร' in words
 
     # ชื่ออะไร
-    features['ชื่ออะไร'] = 'ชื่อ' in words or 'ชื่ออะไร' in words
+    features['ชื่ออะไร'] = 'ชื่อ' in words or 'ชื่ออะไร' in words or 'ชื่อราย' in words
 
     # บอกลา
     features['บอกลา'] = 'บาย' in words or 'บ้ายบาย' in words  or 'ลาก่อน' in words  or 'บ้ายบ่าย' in words  or 'บรัย' in words  
