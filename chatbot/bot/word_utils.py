@@ -86,9 +86,6 @@ def get_features(data):
     # อยู่ที่ไหน
     features['อยู่ที่ไหน'] = 'อยู่ที่ไหน' in words or 'อยู่' in words or 'ที่ไหน' in words or 'ไหน' in words
 
-    # ใครสร้าง
-    features['ใครสร้าง'] = 'ใคร' in words or 'สร้าง' in words or 'ทำ' in words
-
     # อากาศเป็นไง
     features['อากาศ'] = 'อากาศ' in words
 
