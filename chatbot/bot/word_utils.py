@@ -81,7 +81,7 @@ def get_features(data):
     features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words or 'สงสัย' in words
 
     # กินอะไรยัง
-    features['กิน'] = 'กิน' in words
+    features['กิน'] = 'กิน' in words or 'ข้าว' in words
 
     # อยู่ที่ไหน
     features['อยู่ที่ไหน'] = 'อยู่ที่ไหน' in words or 'อยู่' in words or 'ที่ไหน' in words or 'ไหน' in words
