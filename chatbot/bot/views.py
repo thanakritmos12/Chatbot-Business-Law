@@ -16,7 +16,7 @@ from . import word_utils
 
 VERIFY_TOKEN = "c735ab9888f151a3721996bef579848694c922b44628dfe489" # generated above
 FB_ENDPOINT = 'https://graph.facebook.com/v12.0/'
-PAGE_ACCESS_TOKEN = "EAAE3KGhIo6EBAM8yffVhk1VmT0T2y5z3L9KrvvZBxZAW6ZAl7tbqm6y9UwwtoBHsl0Czy0qw76ZCfHYbz37ctlFbMpJ9WEyvP7LcTmweVFS8nr2xoNSk9a3jv1IpUahqN9HtXZCv2qKccZAgDZAtGZCREBV3BN1uJQM7fV01TvNZBoTNS1K3P30en"  
+PAGE_ACCESS_TOKEN = "EAAWZBxFP5ZBe8BAAiIxxon64PgvQHvnVCLnNrRu12Ys73MHb9HMRJt0sjVL4jZAZC1RR2PneXSKZCpJczhZBaH4KSzWoEu0OCZAw8UeoyloMM2eqI5LrearT6i3HmcpXI7hV0dMUrCcZBzq6O5Wbf3TGgkEy8r6vtIZBQRZCHRlqeidwazZCmdXs35R"  
 
 
 def parse_and_send_fb_message(fbid, recevied_message):
