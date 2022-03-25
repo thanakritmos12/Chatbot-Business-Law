@@ -7,7 +7,7 @@ def clean_words(words):
     # stopwords = pythainlp.corpus.common.thai_stopwords()
     stopwords = ['กฎหมาย','กฏหมาย','บ้าง', 'ไหม', 'มั้ย', 'ไม', 'ร้านค้า', 'ร้าน',
      'ค้า', 'กฎ', 'การ', 'ความ', 'ใน', 'ที่', 'ต่างๆ', 'ได้', 'อย่าง','ออนไลน์','online','ขาย' ,
-     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยู่', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา', 'เลย', 'จ้า', 'ครับ', 'ค้าบ', 'ค่ะ', 'คับ']
+     'ไง','อ้ะ', 'หรอ', 'อะไร', 'อยู่', 'อยาก', 'ทราบ', 'ของ', 'ป่าว', 'เรา', 'เลย', 'จ้า', 'ครับ', 'ค้าบ', 'ค่ะ', 'คับ','ค่าบ','(',')','ต้อง']
     data = []
     for word in words:
         word = word.strip()
@@ -57,10 +57,10 @@ def get_features(data):
     features['สบายดี'] = 'สบาย' in words or 'บาย' in words or 'บัย' in words or 'สบายดี' in words
 
     # บอทโง่
-    features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบ' in words or 'งง' in words
+    features['บอทโง่'] = 'ตอบผิด' in words or 'ห้ะ' in words or 'ตอบ' in words or 'งง' in words or 'มั่ว' in words or 'เพ้อ' in words
 
     # ชมบอท
-    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words or 'ดีมาก' in words or 'ดี' in words or 'มาก' in words
+    features['ชมบอท'] = 'เก่งมาก' in words or 'เก่ง' in words or 'ดีมาก' in words or 'ดี' in words or 'มาก' in words or 'เยี่ยม' in words or 'สุดยอด' in words  or 'สุด' in words
 
     # ทำอะไร
     features['ทำอะไร'] = 'ทำอะไร' in words or 'ทำ' in words or 'ทำไร' in words
@@ -68,15 +68,24 @@ def get_features(data):
     # ชื่ออะไร
     features['ชื่ออะไร'] = 'ชื่อ' in words or 'ชื่ออะไร' in words
 
+    # บอกลา
+    features['บอกลา'] = 'บาย' in words or 'บ้ายบาย' in words  or 'ลาก่อน' in words  or 'บ้ายบ่าย' in words  or 'บรัย' in words  
+
     # หัวข้อ
     features['หัวข้อ'] = 'หัวข้อ' in words
 
     # ยินดี
-    features['ยินดี'] = 'ขอบคุณ' in words or 'ขอบคุณบอท' in words or 'ขอบใจ' in words or 'ขอบใจบอท' in words or 'ขอบคุน' in words
+    features['ยินดี'] = 'ขอบคุณ' in words or 'ขอบคุณบอท' in words or 'ขอบใจ' in words or 'ขอบใจบอท' in words or 'ขอบคุน' in words or 'แต้ง' in words or 'แต๊ง' in words
 
     # คำถาม
-    features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words
+    features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words or 'สงสัย' in words
 
+    # easter egg 1
+    features['เบื่อ'] = 'เบื่อ' in words or 'เบื่อจัง' in words or 'เหงา' in words or 'เบื่อๆ' in words or 'เหงาๆ' in words or 'เหงาจัง' in words
+    features['ตกลง'] = 'โอเค'in words or 'เคร' in words or 'เค' in words or 'เคร้' in words or 'โอเช' in words or 'เช' in words or 'ตกลง' in words or 'ได้' in words or 'เอา' in words or 'โอเคร' in words or 'ok' in words or 'k' in words or 'okay' in words
+    features['หนึ่งถูก'] = 'ไทย' in words or 'ตรัง' in words or 'เพราะ' in words or 'ประเทศ' in words
+    features['สองถูก'] = 'ฉัน' in words or 'เพล' in words or 'ไป' in words
+    features['สามถูก'] = 'ปีโป้' in words or 'ปีโป๊' in words or 'โป้' in words or 'ปะ' in words
     data = {"words": " ".join(words), "count": len(words)}
     data.update(features)
     return data 
