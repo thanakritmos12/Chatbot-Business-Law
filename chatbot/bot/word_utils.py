@@ -79,7 +79,7 @@ def get_features(data):
 
     # คำถาม
     features['ถามหน่อย'] = 'มีคำถาม' in words or 'มีคำถามจะมาถาม' in words or 'ถามหน่อย' in words or 'ขอถามหน่อย' in words or 'ขอถาม' in words or 'ถาม' in words or 'สงสัย' in words
-
+    
     # easter egg 1
     features['เบื่อ'] = 'เบื่อ' in words or 'เบื่อจัง' in words or 'เหงา' in words or 'เบื่อๆ' in words or 'เหงาๆ' in words or 'เหงาจัง' in words
     features['ตกลง'] = 'โอเค'in words or 'เคร' in words or 'เค' in words or 'เคร้' in words or 'โอเช' in words or 'เช' in words or 'ตกลง' in words or 'ได้' in words or 'เอา' in words or 'โอเคร' in words or 'ok' in words or 'k' in words or 'okay' in words
