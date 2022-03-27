@@ -15,8 +15,8 @@ from django.apps import apps
 from . import word_utils
 
 VERIFY_TOKEN = "c735ab9888f151a3721996bef579848694c922b44628dfe489" # generated above
-FB_ENDPOINT = 'https://graph.facebook.com/v12.0/'
-PAGE_ACCESS_TOKEN = "EAAE3KGhIo6EBAANZBW3VZCG0Y8qVVtARFOfYNQNrWOCzfSV8bXiEsGOl8jZCjFCmSxo53WNDdR9j51zJaDdb7BDWZBFiEULk0PHHuzFYneuglV8PzyfZByUsXEGeI1veBjIezICwSPwryMZC9U2EKf82duhrUCjEzYmk23b3ZCN1VnwOd5qjqKP"  
+FB_ENDPOINT = 'https://graph.facebook.com/v13.0/'
+PAGE_ACCESS_TOKEN = "EAAU7mqowBKgBALZCgcOwm7A4hkZAJCyiTD9YEepq2QPV7RF80dZAryAOFabuU4YjMXLuxLEAQZBFZASMVPBOsjxlHVR5ArIerr0RzkqDCVcy7pUHiShIkmZBtZAsiDrdqBmztrY2mptJ7wZCISyXKZB9mGmYplZBKIvSbHd59yV8UBpwuoZAbZBKhnZCv"  
 
 
 def parse_and_send_fb_message(fbid, recevied_message):
